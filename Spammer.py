@@ -1,9 +1,10 @@
 
-from getch import pause, pause_exit
+from getch import pause
 import pyautogui as pg
 from time import sleep
 from os import system, name
 import sys
+
 
 def clear():
     if name == "nt":  # pentru windows
@@ -35,7 +36,7 @@ def whatsappspammer():
                     redelay()
 
                     def finaltask():
-                        print("\033[1;35mNow open whatsapp web on your computer(if you are using kali linux open whatsapp on your virtual machine because otherwise it will not work!).\nSelect a conversation(your target)and open the conversation.\nAfter that come back to this program and press any key to start\033[1;31m(don't close Whatsapp!)\033[1;35m.")
+                        print("\033[1;35mNow open whatsapp web on your computer.\nSelect a conversation(your target)and open the conversation.\nAfter that come back to this program and press any key to start\033[1;31m(don't close Whatsapp!)\033[1;35m.")
                         sleep(2)
                         pause(
                             "\033[1;35mPress any key to start!\033[1;31mAfter you start the program open back Whatsapp and just wait 5 seconds!\t")
@@ -86,15 +87,21 @@ def whatsappspammer():
 
 
 def showoptions():
-
-    options = int(
-        input("\033[1;34mOPTIONS:\n1)Whatsapp spammer\n\033[1;33mChoose one option: "))
-    if options == 1:
-        clear()
-        printcool()
-        whatsappspammer()
-    else:
-        print("\033[1;31mTry again!")
+    try:
+        options = int(
+            input("\033[1;34mOPTIONS:\n1)Whatsapp spammer\n\033[1;33mChoose one option: "))
+        if options == 1:
+            clear()
+            printcool()
+            try:
+                whatsappspammer()
+            except KeyboardInterrupt:
+                print("\n\033[1;31mERROR!PROGRAM INTERRUPTED!")
+        else:
+            print("\033[1;31mTry again!")
+            showoptions()
+    except ValueError:
+        print("\033[1;31mPlease input a valid value!")
         showoptions()
 
 
@@ -114,6 +121,12 @@ def printcool():
                 ░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═╝╚═╝░░
 """)
 
-clear()
+
 printcool()
-showoptions()
+try:
+    showoptions()
+except KeyboardInterrupt:
+    print("\n\033[1;31m!ROGRAM INTERRUPTED!")
+except ValueError:
+    print("\033[1;31mPlease input a valid value!")
+    showoptions()
