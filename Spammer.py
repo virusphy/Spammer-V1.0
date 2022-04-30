@@ -125,7 +125,7 @@ printcool()
 try:
     showoptions()
 except KeyboardInterrupt:
-    print("\n\033[1;31m!ROGRAM INTERRUPTED!")
+    print("\n\033[1;31mERROR!PROGRAM INTERRUPTED!")
 except ValueError:
     print("\033[1;31mPlease input a valid value!")
     showoptions()
