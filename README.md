@@ -26,4 +26,13 @@ Use this tool for #kalilinux
 
 5)Enjoy
 #### Follow all the instructions found in the script and you should be ready to prank your friends:)
+
+6)Secret:)
+> If you want this tool to send infinite messages just follow this step:
+>   
+>   1)Choose an message to send
+>   
+>   2)When the script asks how many times do you want to send the message just input `-1`
+>   
+>   3)Choose a delay(Recommended:`0.1`)
 # !!! I am not responsible for any liability caused by this tool!!!
