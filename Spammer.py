@@ -3,7 +3,7 @@ from getch import pause, pause_exit
 import pyautogui as pg
 from time import sleep
 from os import system, name
-
+import sys
 
 def clear():
     if name == "nt":  # pentru windows
@@ -69,7 +69,9 @@ def whatsappspammer():
 ░╚═══██╗██║░░░██║██║░░██╗██║░░██╗██╔══╝░░░╚═══██╗░╚═══██╗██╔══╝░░██║░░░██║██║░░░░░██║░░░░░░░╚██╔╝░░
 ██████╔╝╚██████╔╝╚█████╔╝╚█████╔╝███████╗██████╔╝██████╔╝██║░░░░░╚██████╔╝███████╗███████╗░░░██║░░░
 ╚═════╝░░╚═════╝░░╚════╝░░╚════╝░╚══════╝╚═════╝░╚═════╝░╚═╝░░░░░░╚═════╝░╚══════╝╚══════╝░░░╚═╝░░░''')
-                        pause_exit(0, "Press any key to leave:")
+                        pause("Press any key to leave:")
+                        clear()
+                        sys.exit()
                     finaltask()
                 except ValueError:
                     print("\033[1;31mPlease input a valid delay!")
