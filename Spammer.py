@@ -35,7 +35,7 @@ def whatsappspammer():
                     redelay()
 
                     def finaltask():
-                        print("\033[1;35mNow open whatsapp web on your computer.\nSelect a conversation(your target)and open the conversation.\nAfter that come back to this program and press any key to start\033[1;31m(don't close Whatsapp!)\033[1;35m.")
+                        print("\033[1;35mNow open whatsapp web on your computer(if you are using kali linux open whatsapp on your virtual machine because otherwise it will not work!).\nSelect a conversation(your target)and open the conversation.\nAfter that come back to this program and press any key to start\033[1;31m(don't close Whatsapp!)\033[1;35m.")
                         sleep(2)
                         pause(
                             "\033[1;35mPress any key to start!\033[1;31mAfter you start the program open back Whatsapp and just wait 5 seconds!\t")
@@ -112,6 +112,6 @@ def printcool():
                 ░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═╝╚═╝░░
 """)
 
-
+clear()
 printcool()
 showoptions()
